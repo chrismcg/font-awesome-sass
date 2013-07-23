@@ -1,8 +1,7 @@
-module Font
-  module Awesome
-    module Sass
-      require 'font/awesome/sass/engine'
-      require 'font/awesome/sass/version'
-    end
-  end
+require "font/awesome/sass/version"
+
+if defined?(Rails::Engine)
+  require 'font/awesome/sass/engine'
+else
+  require 'font/awesome/sass/sprockets'
 end
